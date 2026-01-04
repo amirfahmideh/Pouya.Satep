@@ -20,7 +20,7 @@ public class AuthorizationService
             if (response.IsSuccessStatusCode)
             {
                 var responseResult = await response.Content.ReadFromJsonAsync<ApiResponse<AuthorizationResult>>();
-                if (responseResult != null && bool.Parse(responseResult.Status) == true && responseResult.Data != null && string.IsNullOrEmpty(responseResult.Errors))
+                if (responseResult != null && responseResult.Status == true && responseResult.Data != null)
                     return responseResult.Data;
                 throw new UnauthorizedException();
             }

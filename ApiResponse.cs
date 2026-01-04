@@ -2,9 +2,9 @@
 
 public class ApiResponse<T>
 {
-    public string? Status { get; set; }
+    public bool? Status { get; set; }
     public string? Message { get; set; }
     public T? Data { get; set; }
-    public string? Errors { get; set; }
-    public string? Paging { get; set; }
+    public object? Errors { get; set; }
+    public object? Paging { get; set; }
 }
