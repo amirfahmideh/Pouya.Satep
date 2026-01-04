@@ -15,7 +15,6 @@ public class AuthorizationService
     {
         try
         {
-            httpClient.BaseAddress = new Uri(serviceConfiguration.JWTTokenServiceUrl);
             var response = await httpClient.PostAsJsonAsync(serviceConfiguration.JWTTokenServiceUrl, new AuthorizationRequest { Username = serviceConfiguration.UserName, Password = serviceConfiguration.Password });
             if (response.IsSuccessStatusCode)
             {
