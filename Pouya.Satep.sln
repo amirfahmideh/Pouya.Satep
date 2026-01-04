@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pouya.Satep", "Pouya.Satep.csproj", "{E3BC925C-3031-5916-DF0A-7887B84F90EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3BC925C-3031-5916-DF0A-7887B84F90EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3BC925C-3031-5916-DF0A-7887B84F90EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3BC925C-3031-5916-DF0A-7887B84F90EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3BC925C-3031-5916-DF0A-7887B84F90EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C37E1D9-DBF3-4D07-B23A-9EBB1FCB5A67}
+	EndGlobalSection
+EndGlobal
