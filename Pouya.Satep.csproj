@@ -31,9 +31,13 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="10.0.1" />
 		<PackageReference Include="MinVer" Version="4.3.0">
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
+		<PackageReference Include="System.Net.Http.Json" Version="10.0.1" />
+		<PackageReference Include="xunit" Version="2.9.3" />
 	</ItemGroup>
 </Project>
