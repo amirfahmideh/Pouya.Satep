@@ -21,6 +21,6 @@ public class InvoiceRequest
 
     public string ToQueryString()
     {
-        return $"?fromPaymentDate={FromPaymentDate:YYYYMMDD}&toPaymentDate={ToPaymentDate:YYYYMMDD}&pageId={PageId}&top={Top}";
+        return $"?fromPaymentDate={FromPaymentDate:yyyyMMdd}&toPaymentDate={ToPaymentDate:yyyyMMdd}&pageId={PageId}&top={Top}";
     }
 }

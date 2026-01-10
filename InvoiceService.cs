@@ -18,24 +18,23 @@ public class InvoiceService
         try
         {
             var result = await authorizationService.LoginAsync();
-            if (result != null)
+            if (result != null && !string.IsNullOrEmpty(result.Token))
             {
-                httpClient.DefaultRequestHeaders.Add("Authorization", $"bearer {result.Token}");
+                httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("bearer", result.Token);
             }
         }
-        catch
+        catch (Exception e)
         {
-            throw new Exception();
+            throw e;
         }
-
     }
 
-    public async Task<InvoiceResult?> GetInvoiceAsync()
+    public async Task<InvoiceResult?> GetInvoiceAsync(InvoiceRequest invoiceRequest)
     {
         try
         {
             await AddAuthorizationBearerAsync();
-            var response = await httpClient.GetAsync(serviceConfiguration.InvoiceServicesUrl);
+            var response = await httpClient.GetAsync($"{serviceConfiguration.InvoiceServicesUrl}{invoiceRequest.ToQueryString()}");
             if (response.IsSuccessStatusCode)
             {
                 var responseResult = await response.Content.ReadFromJsonAsync<InvoiceResult>();
