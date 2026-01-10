@@ -12,10 +12,29 @@ public class InvoiceService
         serviceConfiguration = _serviceConfiguration;
     }
 
+    public async Task AddAuthorizationBearerAsync()
+    {
+        AuthorizationService authorizationService = new AuthorizationService(httpClient, serviceConfiguration);
+        try
+        {
+            var result = await authorizationService.LoginAsync();
+            if (result != null)
+            {
+                httpClient.DefaultRequestHeaders.Add("Authorization", $"bearer {result.Token}");
+            }
+        }
+        catch
+        {
+            throw new Exception();
+        }
+
+    }
+
     public async Task<InvoiceResult?> GetInvoiceAsync()
     {
         try
         {
+            await AddAuthorizationBearerAsync();
             var response = await httpClient.GetAsync(serviceConfiguration.InvoiceServicesUrl);
             if (response.IsSuccessStatusCode)
             {
