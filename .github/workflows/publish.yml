@@ -37,9 +37,8 @@ jobs:
       - name: Create NuGet output folder
         run: New-Item -ItemType Directory -Force -Path "${{ env.NuGetDirectory }}" | Out-Null
 
-      # IMPORTANT: point to the packable project or solution
       - name: Pack
-        run: dotnet pack ./src/Pouya.Satep/Pouya.Satep.csproj --configuration Release --output "${{ env.NuGetDirectory }}" -p:ContinuousIntegrationBuild=true
+        run: dotnet pack ./Pouya.Satep.sln --configuration Release --output "${{ env.NuGetDirectory }}" -p:ContinuousIntegrationBuild=true
 
       - name: Show produced packages
         run: Get-ChildItem -Path "${{ env.NuGetDirectory }}" -Filter *.nupkg -File | Format-Table -AutoSize
