@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	  <TargetFramework>netstandard2.1</TargetFramework>
+	<TargetFramework>netstandard2.1</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Authors>Amir Fahmideh</Authors>
@@ -19,69 +19,21 @@
   <ItemGroup>
       <None Include="icon.png" Pack="true" PackagePath="" />
   </ItemGroup>
-  <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-	  <TargetFramework>netstandard2.1</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <Authors>Amir Fahmideh</Authors>
-    <Description>.net standard library to communicate with Satep web services</Description>
-    <PackageTags>Pouya Service Satep</PackageTags>
-    <PackageProjectUrl>https://github.com/amirfahmideh/Pouya.Satep</PackageProjectUrl>
-    <EnablePackageValidation>true</EnablePackageValidation>
-    <LangVersion>latest</LangVersion>
-  </PropertyGroup>
-  <PropertyGroup>
-      <PackageLicenseExpression>MIT</PackageLicenseExpression>
-  </PropertyGroup>
-  <PropertyGroup>
-      <PackageReadmeFile>README.md</PackageReadmeFile>
-  </PropertyGroup>
-  <ItemGroup>
-      <None Include="icon.png" Pack="true" PackagePath="" />
-  </ItemGroup>
-  <PropertyGroup>
-      <PackageIcon>icon.png</PackageIcon>
-  </PropertyGroup>
-  <ItemGroup>
+   	<ItemGroup>
 		<!-- Add a README.md next to the csproj -->
 		<None Include="README.md" Pack="true" PackagePath="" />
 	</ItemGroup>
-<ItemGroup>
+	<ItemGroup>
+    	<PackageReference Include="System.Net.Http.Json" Version="10.0.1" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="10.0.1" />
 		<PackageReference Include="DotNet.ReproducibleBuilds" Version="1.1.1">
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Http" Version="10.0.1" />
 		<PackageReference Include="MinVer" Version="4.3.0">
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
-		<PackageReference Include="System.Net.Http.Json" Version="10.0.1" />
-		<PackageReference Include="xunit" Version="2.9.3" />
-	</ItemGroup>
-</Project>
-
-  <PropertyGroup>
-      <PackageIcon>icon.png</PackageIcon>
-  </PropertyGroup>
-  <ItemGroup>
-		<!-- Add a README.md next to the csproj -->
-		<None Include="README.md" Pack="true" PackagePath="" />
-	</ItemGroup>
-<ItemGroup>
-		<PackageReference Include="DotNet.ReproducibleBuilds" Version="1.1.1">
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-			<PrivateAssets>all</PrivateAssets>
-		</PackageReference>
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Http" Version="10.0.1" />
-		<PackageReference Include="MinVer" Version="4.3.0">
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-			<PrivateAssets>all</PrivateAssets>
-		</PackageReference>
-		<PackageReference Include="System.Net.Http.Json" Version="10.0.1" />
-		<PackageReference Include="xunit" Version="2.9.3" />
 	</ItemGroup>
 </Project>
